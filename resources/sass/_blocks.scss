@@ -1,0 +1,122 @@
+.block-homescreen {
+    padding-top: 50px;
+    min-height: 600px;
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .text {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    h1 {
+        text-transform: uppercase;
+        line-height: 40px;
+        font-size: 107px;
+        font-weight: 700;
+        span {
+            font-size: 35px;
+        }
+    }
+    .descr {
+        margin-top: 45px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .btn {
+        margin-top: 45px;
+    }
+    .banner {
+        width: 59%;
+    }
+}
+
+.block-categories {
+    &:only-child {
+        padding: 70px 0;
+    }
+    .categories-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        li {
+            flex: 0 0 calc((100% / 3) - 20px);
+        }
+    }
+    .category-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0;
+        &:hover {
+            box-shadow: 3px 5.2px 20.3px 6.8px rgba(0, 4, 2, 0.08);
+        }
+        // &-photo {
+
+        // }
+        &-title {
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+            padding: 22px 0;
+        }
+    }
+}
+
+.block-category-products {
+    padding: 50px 0;
+    &:only-child {
+        padding: 70px 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-tabs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+        gap: 20px;
+        width: 100%;
+        padding: 30px 0;
+        a {
+            font-size: 13px;
+            color: $grey;
+            // width: 140px;
+            min-height: 42px;
+            border: 1px solid currentColor;
+            padding: 0 5px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            transition: $duration;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            &.current {
+                color: $black;
+                pointer-events: none;
+            }
+        }
+    }
+    .category-products-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        gap: 24px 12px;
+    }
+}
+
+.block-seo {
+    padding: 20px 0;
+    font-size: 13px;
+    p {
+        &:not(:last-child) {
+            margin-bottom: 13px;
+        }
+    }
+}

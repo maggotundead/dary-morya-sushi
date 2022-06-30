@@ -1,0 +1,113 @@
+.btn {
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    display: block;
+    min-width: 170px;
+    text-align: center;
+    border: 0;
+    &.green {
+        background: $green-gradient;
+    }
+}
+
+.block-title {
+    padding: 36px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.product-item {
+    transition: $duration;
+    box-shadow: 0;
+    padding: 25px 10px 15px 10px;
+    &:hover {
+        box-shadow: 3px 5.2px 20.3px 6.8px rgba(0, 4, 2, 0.08);
+    }
+    &-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-title {
+        font-size: 17px;
+        font-weight: 700;
+    }
+    &-descr {
+        padding-top: 12px;
+        min-height: 90px;
+        font-size: 12px;
+        line-height: 17px;
+        width: 100%;
+        p {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    &-weight {
+        font-size: 15px;
+        margin-right: 9px;
+        color: $grey;
+    }
+    &-price {
+        font-size: 18px;
+        margin-right: 10px;
+        font-weight: 700;
+    }
+    &-add {
+        background: $green-gradient;
+        color: #fff;
+        padding: 7px 10px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+        margin-left: auto;
+        transition: $duration;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.loadmore {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    border: 2px solid $orange;
+    border-radius: 25px;
+    padding: 0px 15px;
+    height: 30px;
+    font-size: 15px;
+    font-family: $alt-font;
+    font-weight: 700;
+    color: $grey;
+    transition: $duration;
+    background-color: transparent;
+    &:hover {
+        background-color: #ff954e;
+        color: #fff;
+        .circle {
+            border-color: #fff;
+        }
+    }
+    .circle {
+        width: 10px;
+        height: 10px;
+        display: block;
+        border: 2px solid #ff954e;
+        border-radius: 100%;
+        margin-left: 15px;
+        transition: $duration;
+    }
+}
