@@ -147,14 +147,11 @@ main {
 
 .container {
     width: 100%;
-    max-width: 1920px;
+    max-width: $container-max-width;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    padding: 0 $container-padding-x-fullhd;
-    @include maxw1600 {
-        padding: 0 $container-padding-x-desktop;
-    }
+    padding: 0 $container-padding-x-desktop;
     @include maxw1024 {
         padding: 0 $container-padding-x-tablet;
     }
