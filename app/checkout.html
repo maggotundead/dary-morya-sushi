@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sushi</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<button class="burger-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+
+					<div class="logo">
+						<a href="/">
+							<img src="img/logo.svg" alt="">
+						</a>
+					</div>
+					<div class="collapsed">
+						<nav class="menu">
+							<ul>
+								<li>
+									<a href="/" class="active">Головна</a>
+								</li>
+								<li>
+									<a href="/">Меню</a>
+								</li>
+								<li>
+									<a href="/">Акції</a>
+								</li>
+								<li>
+									<a href="/">Доставка</a>
+								</li>
+								<li>
+									<a href="/">Контакти</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="contacts">
+							<a href="https://instagram.com/darymorya.sushi.sumy" rel="nofollow noopener" class="insta" target="_blank">
+								<img src="img/icons/icon-insta.png" alt="">
+							</a>
+							<a href="tel:0990663511" class="phone">
+								<img src="img/icons/icon-phone.png" alt="">
+								<span>
+									099-066-35-11
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="cart">
+						<button class="cart-btn">
+							<img src="img/icons/icon-cart.png" alt="">
+							<span>0</span>
+						</button>
+						<div class="cart-inner"></div>
+					</div>
+				</div>
+			</header>
+
+			<main class="content">
+                <section class="block-checkout">
+                    <div class="container">
+                        <h1 class="block-title">
+                            оформлення замовлення
+                        </h1>
+                        <div class="checkout">
+                            <table class="checkout-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Продукт
+                                        </th>
+                                        <th>
+                                            Цiна
+                                        </th>
+                                        <th>
+                                            Кiлькiсть
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="checkout-product-info">
+                                                <button></button>
+                                                <img src="https://tokyo-sushi.com.ua/storage/products/7f/7f4c521c0ec05990c6e6327e17a16a7f4929f1852050.jpeg" alt="">
+                                                <h3>
+                                                    Акція Сет "Флай"
+                                                </h3>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkout-product-price">
+                                                519 <span>грн</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="checkout-product-quantity">
+                                                <button>-</button>
+                                                <input type="number" min="1" max="9" value="1">
+                                                <button>+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="checkout-related">
+                                <h3 class="checkout-related-title">
+                                    БажаЄте додати напоÏ чи соуси?
+                                </h3>
+                                <div class="checkout-related-products">
+                                    <div class="related-slider swiper-container js-related-swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/9b/9b9836b9f7dc2f50f267e0d0be0235572f52cb85151.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Горіховий соус
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/9f/9f51cbeaf6c8c9e33fb58f8f4c0f050415cddadb1525.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Соус Сирний
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/b7/b7092a18a980c647864ac60cff392f15b1b669dc200.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Соус Sweet Чилі
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/0a/0a01e333494a6c7f1ec442272140ac5cdbf00b64153.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Соус Унагі
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/18/18acbb3207d19a1c84115f87aafa190326a46dc0150.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Соус Манго-Чилі
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/40/401954dfbd94f2c2819dc72fb4e78b66fd70bc29149.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Імбир
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-weight">
+                                                                30мл
+                                                            </div>
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/f3/f3499e49a800b44658b27ed32358afb9a6031843147.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Васабі
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                            <div class="product-item-weight">
+                                                                15г
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-item">
+                                                    <div class="product-item-photo">
+                                                        <img src="https://tokyo-sushi.com.ua/storage/products/58/58c2656f80dbc90ab7e47c7d0e6173c20a1bb5202027.jpeg" alt="">
+                                                    </div>
+                                                    <div class="product-item-info">
+                                                        <div class="product-item-title">
+                                                            Сік Sandora
+                                                        </div>
+                                                        <div class="product-item-params">
+                                                            <div class="product-item-price">
+                                                                60 <span>грн</span>
+                                                            </div>
+                                                            <div class="product-item-weight">
+                                                                1л
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn green small product-item-order">
+                                                            в кошик
+                                                        </button>
+                                                        <!-- <button class="btn orange small product-item-order">
+                                                            в кошику
+                                                        </button> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-controls">
+                                            <div class="swiper-pagination"></div>
+                                            <button class="swiper-button swiper-button-prev"></button>
+                                            <button class="swiper-button swiper-button-next"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-summary">
+                                <div class="checkout-delivery-annotation">
+                                    Безкоштовна доставка від 650 грн
+                                </div>
+                                <div class="checkout-total">
+                                    До сплати: <span>1218 грн</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="contacts">
+						<a href="tel:0990663511" class="phone">
+							<img src="img/icons/icon-phone.png" alt="">
+							<span>
+								099-066-35-11
+							</span>
+						</a>
+
+						<address class="address">
+                            <a href="https://maps.google.com/maps?daddr=50.915289473323675,34.814197684261224" rel="noindex nofollow noreferrer" target="_blank">
+                                <img src="img/icons/icon-marker.png" alt="">
+                                <span>
+                                    м. Суми, вул. Троїцька, 17
+                                </span>
+                            </a>
+                        </address>
+					</div>
+					<div class="copyright">
+						© 2022 All rights reserved
+					</div>
+					<div class="logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

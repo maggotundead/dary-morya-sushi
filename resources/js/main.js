@@ -1,18 +1,23 @@
 
-const teamSwiper = new Swiper('.js-team-swiper', {
+const teamSwiper = new Swiper('.js-related-swiper', {
     slidesPerView: 'auto',
     loop: true,
     draggable: true,
+    spaceBetween: 32,
     // noSwiping: true,
-    // mousewheel: {
-    //     forceToAxis: true,
-    // },
+    autoplay: {
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+    },
+    mousewheel: {
+        forceToAxis: true,
+    },
     // noSwiping: true,
     slideToClickedSlide: true,
-    // keyboard: {
-    //     enabled: true,
-    //     onlyInViewport: true
-    // },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -23,40 +28,6 @@ const teamSwiper = new Swiper('.js-team-swiper', {
         prevEl: '.swiper-button-prev',
     },
 });
-const zoneSwiper = new Swiper('.js-zones-swiper', {
-    slidesPerView: 1,
-    loop: true,
-    draggable: true,
-    // noSwiping: true,
-    // mousewheel: {
-    //     forceToAxis: true,
-    // },
-    noSwiping: true,
-    // slideToClickedSlide: true,
-    // keyboard: {
-    //     enabled: true,
-    //     onlyInViewport: true
-    // },
-    spaceBetween: 26,
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        0: {
-            spaceBetween: 16,
-        },
-        768: {
-            spaceBetween: 26,
-        },
-    }
-});
-
 
 
 document.querySelector('.burger').addEventListener('click', () => {

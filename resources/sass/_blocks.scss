@@ -112,7 +112,7 @@
 }
 
 .block-seo {
-    padding: 20px 0;
+    padding: 50px 0;
     font-size: 13px;
     p {
         &:not(:last-child) {
@@ -235,6 +235,187 @@
             border-top: 1px solid $grey;
             grid-column: span 2;
             height: 150px;
+        }
+    }
+}
+
+.block-product {
+    padding: 70px 0;
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        &-photo {
+            position: relative;
+        }
+        &-label {
+            position: absolute;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            z-index: 2;
+            left: -24px;
+            top: 24px;
+            padding: 4px 24px;
+            pointer-events: none;
+            &.green {
+                background: $green-gradient;
+            }
+            &.orange {
+                background: $orange-gradient;
+            }
+        }
+        &-info {
+            display: flex;
+            flex-wrap: wrap;
+            // align-items: center;
+            align-items: baseline;
+            padding-top: 48px;
+        }
+        &-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+            width: 100%;
+            background: $green-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &-price {
+            margin-right: 4px;
+            color: $orange;
+            display: flex;
+            align-items: baseline;
+            font-size: 28px;
+            font-weight: 700;
+
+            .old-price {
+                font-weight: 400;
+                text-decoration: line-through;
+                margin-right: 8px;
+                font-size: 24px;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+        &-weight {
+            color: rgba($black, .8);
+        }
+        &-contain {
+            margin-top: 24px;
+            width: 100%;
+            &-title {
+                color: $grey;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            &-list {
+                margin-top: 16px;
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                gap: 8px 16px;
+            }
+            &-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                width: 100px;
+                img {
+                    width: 100px;
+                }
+                span {
+                    font-size: 12px;
+                    margin-top: 8px;
+                    text-align: center;
+                }
+            }
+        }
+        &-order {
+            margin-top: 24px;
+        }
+    }
+}
+
+.block-related-products {
+    padding: 50px 0;
+}
+
+.block-checkout {
+    padding: 70px 0;
+    .checkout {
+        &-table {
+            width: 100%;
+            th {
+                background-color: rgba($orange, .1);
+                height: 50px;
+                // min-width: 200px;
+            }
+            td {
+                padding: 16px 0;
+                border-bottom: 1px solid $grey;
+            }
+        }
+
+        &-product-info {
+            display: flex;
+            align-items: center;
+            button {
+                width: 36px;
+                height: 36px;
+                margin-right: 16px;
+            }
+            img {
+                width: 80px;
+                margin-right: 16px;
+            }
+            h3 {
+                font-weight: 400;
+            }
+        }
+        &-product-price {
+            text-align: center;
+            color: $orange;
+            font-size: 18px;
+            font-weight: 700;
+            span {
+                font-size: 12px;
+            }
+        }
+
+        &-product-quantity {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            button {
+                color: $orange;
+                font-weight: 700;
+                width: 36px;
+                height: 36px;
+                font-size: 24px;
+            }
+            input {
+                appearance: textfield;
+                text-align: center;
+                height: 36px;
+                border: 0;
+                border-bottom: 1px solid transparent;
+                width: 50px;
+                transition: $duration;
+                font-size: 24px;
+                &:focus {
+                    border-color: $orange;
+                }
+            }
+        }
+
+        &-related {
+            margin-top: 24px;
+            &-products {
+                margin-top: 16px;
+            }
         }
     }
 }
