@@ -192,21 +192,25 @@
     }
 
     .swiper-button {
-        z-index: 3;
-        color: $orange;
-        margin: 0;
         top: 88px;
     }
+}
 
-    .swiper-pagination {
-        position: relative;
-        margin-top: 32px;
-        bottom: 0;
-        &-bullet {
-            border-radius: 0;
-            &-active {
-                background: $orange;
-            }
+.swiper-button {
+    z-index: 3;
+    color: $orange;
+    margin: 0;
+    // top: 88px;
+}
+
+.swiper-pagination {
+    position: relative;
+    margin-top: 32px;
+    bottom: 0;
+    &-bullet {
+        border-radius: 0;
+        &-active {
+            background: $orange;
         }
     }
 }

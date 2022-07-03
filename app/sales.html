@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Sushi</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<button class="burger-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+
+					<div class="logo">
+						<a href="/">
+							<img src="img/logo.svg" alt="">
+						</a>
+					</div>
+					<div class="collapsed">
+						<nav class="menu">
+							<ul>
+								<li>
+									<a href="/" class="active">Головна</a>
+								</li>
+								<li>
+									<a href="/">Меню</a>
+								</li>
+								<li>
+									<a href="/">Акції</a>
+								</li>
+								<li>
+									<a href="/">Доставка</a>
+								</li>
+								<li>
+									<a href="/">Контакти</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="contacts">
+							<a href="https://instagram.com/darymorya.sushi.sumy" rel="nofollow noopener" class="insta" target="_blank">
+								<img src="img/icons/icon-insta.png" alt="">
+							</a>
+							<a href="tel:0990663511" class="phone">
+								<img src="img/icons/icon-phone.png" alt="">
+								<span>
+									099-066-35-11
+								</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- выводи корзину если есть продукты -->
+					<div class="cart">
+						<button class="cart-btn">
+							<img src="img/icons/icon-cart.png" alt="">
+							<span>1</span>
+						</button>
+						<div class="cart-inner">
+							<table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Продукт
+                                        </th>
+                                        <th>
+                                            Цiна
+                                        </th>
+                                        <th>
+                                            Кiлькiсть
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="cart-product-info">
+                                                <button></button>
+                                                <img src="https://tokyo-sushi.com.ua/storage/products/7f/7f4c521c0ec05990c6e6327e17a16a7f4929f1852050.jpeg" alt="">
+                                                <h3>
+                                                    Акція Сет "Флай"
+                                                </h3>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-price">
+                                                519 <span>грн</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-quantity">
+                                                <button>-</button>
+                                                <input type="number" min="1" max="9" value="1">
+                                                <button>+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="cart-product-info">
+                                                <button></button>
+                                                <img src="https://tokyo-sushi.com.ua/storage/products/7f/7f4c521c0ec05990c6e6327e17a16a7f4929f1852050.jpeg" alt="">
+                                                <h3>
+                                                    Акція Сет "Флай"
+                                                </h3>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-price">
+                                                519 <span>грн</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-quantity">
+                                                <button>-</button>
+                                                <input type="number" min="1" max="9" value="1">
+                                                <button>+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="cart-product-info">
+                                                <button></button>
+                                                <img src="https://tokyo-sushi.com.ua/storage/products/7f/7f4c521c0ec05990c6e6327e17a16a7f4929f1852050.jpeg" alt="">
+                                                <h3>
+                                                    Акція Сет "Флай"
+                                                </h3>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-price">
+                                                519 <span>грн</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="cart-product-quantity">
+                                                <button>-</button>
+                                                <input type="number" min="1" max="9" value="1">
+                                                <button>+</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+							<div class="cart-summary">
+                                <div class="cart-delivery-annotation">
+                                    Безкоштовна доставка від 650 грн
+                                </div>
+                                <div class="cart-total">
+                                    До сплати: <span>1218 грн</span>
+                                </div>
+                            </div>
+							<button class="btn green cart-proceed">оформити замовлення</button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="content">
+				<section class="block-category-products">
+					<div class="container">
+                        <div class="category-banner">
+                            <div class="swiper-container js-sales-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="https://tokyo-sushi.com.ua/storage/banners/June2022/iCHnNjUZu3ntvP08JLdH.jpg" media="(min-width: 1023px)">
+                                            <source srcset="https://tokyo-sushi.com.ua/storage/banners/June2022/iCHnNjUZu3ntvP08JLdH.jpg" media="(min-width: 767px)">
+                                            <img src="https://tokyo-sushi.com.ua/storage/banners/June2022/iCHnNjUZu3ntvP08JLdH.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <source srcset="https://tokyo-sushi.com.ua/storage/banners/June2022/e9HMW27OQTUJla7tr79m.jpg" media="(min-width: 1023px)">
+                                            <source srcset="https://tokyo-sushi.com.ua/storage/banners/June2022/e9HMW27OQTUJla7tr79m.jpg" media="(min-width: 767px)">
+                                            <img src="https://tokyo-sushi.com.ua/storage/banners/June2022/e9HMW27OQTUJla7tr79m.jpg" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-controls">
+                                    <button class="swiper-button swiper-button-prev"></button>
+                                    <div class="swiper-pagination"></div>
+                                    <button class="swiper-button swiper-button-next"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- если на странице одной категории то н1 -->
+						<h1 class="block-title">
+							акційні товари
+						</h1>
+						<!-- <div class="category-tabs">
+                            <a class="active" href="/">Преміум-роли</a>
+                            <a href="/">Гарніри</a>
+                            <a href="/">Закуски</a>
+                            <a href="/">Напої</a>
+                            <a href="/">Роли</a>
+                            <a href="/">Сезонні пропозиції</a>
+                            <a href="/">Сети</a>
+                            <a href="/">Суші</a>
+                        </div> -->
+						<div class="category-products-list">
+							<div class="product-item">
+								<div class="product-item-label orange">Акция</div>
+								<div class="product-item-photo">
+									<img src="img/temp/category-rolls.jpg" alt="" loading="lazy">
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-title">
+										Сирний рол з лососем
+									</div>
+									<div class="product-item-descr">
+										<p>
+											Склад: <br>
+											рис, водорості норі, сир «Філадельфія», лосось, манго, сир чеддер.&nbsp;
+										</p>
+									</div>
+									<div class="product-item-params">
+										<div class="product-item-weight">
+											260 г
+										</div>
+										<div class="product-item-price">
+											<span class="old-price">155</span>
+											<span class="current-price">125</span>
+											<span class="currency">
+												грн
+											</span>
+										</div>
+									</div>
+									<button class="btn green small product-item-add">
+										в кошик
+									</button>
+									<!-- <button class="btn orange small product-item-add">
+										в кошику
+									</button> -->
+								</div>
+							</div>
+							<div class="product-item">
+								<div class="product-item-label orange">Супер цiна</div>
+								<div class="product-item-photo">
+									<img src="img/temp/category-rolls.jpg" alt="" loading="lazy">
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-title">
+										Сирний рол з лососем
+									</div>
+									<div class="product-item-descr">
+										<p>
+											Склад: <br>
+											рис, водорості норі, сир «Філадельфія», лосось, манго, сир чеддер.&nbsp;
+										</p>
+									</div>
+									<div class="product-item-params">
+										<div class="product-item-weight">
+											260 г
+										</div>
+										<div class="product-item-price">
+											<span class="old-price">155</span>
+											<span class="current-price">155</span>
+											<span class="currency">
+												грн
+											</span>
+										</div>
+									</div>
+									<button class="btn green small product-item-add">
+										в кошик
+									</button>
+									<!-- <button class="btn orange small product-item-add">
+										в кошику
+									</button> -->
+								</div>
+							</div>
+							<div class="product-item">
+								<div class="product-item-label green">Новинка</div>
+								<div class="product-item-photo">
+									<img src="img/temp/category-rolls.jpg" alt="" loading="lazy">
+								</div>
+								<div class="product-item-info">
+									<div class="product-item-title">
+										Сирний рол з лососем
+									</div>
+									<div class="product-item-descr">
+										<p>
+											Склад: <br>
+											рис, водорості норі, сир «Філадельфія», лосось, манго, сир чеддер.&nbsp;
+										</p>
+									</div>
+									<div class="product-item-params">
+										<div class="product-item-weight">
+											260 г
+										</div>
+										<div class="product-item-price">
+											<span class="old-price">155</span>
+											<span class="current-price">155</span>
+											<span class="currency">
+												грн
+											</span>
+										</div>
+									</div>
+									<button class="btn green small product-item-add">
+										в кошик
+									</button>
+									<!-- <button class="btn orange small product-item-add">
+										в кошику
+									</button> -->
+								</div>
+							</div>
+						</div>
+						<!-- <button class="loadmore">
+							<span>показати більше</span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+							<span class="circle"></span>
+						</button> -->
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div class="container">
+					<div class="contacts">
+						<a href="tel:0990663511" class="phone">
+							<img src="img/icons/icon-phone.png" alt="">
+							<span>
+								099-066-35-11
+							</span>
+						</a>
+
+						<address class="address">
+							<a href="https://maps.google.com/maps?daddr=50.915289473323675,34.814197684261224" rel="noindex nofollow noreferrer" target="_blank">
+								<img src="img/icons/icon-marker.png" alt="">
+								<span>
+									м. Суми, вул. Троїцька, 17
+								</span>
+							</a>
+						</address>
+					</div>
+					<div class="copyright">
+						© 2022 All rights reserved
+					</div>
+					<div class="logo">
+						<img src="img/logo.svg" alt="">
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

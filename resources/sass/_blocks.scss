@@ -77,6 +77,16 @@
         flex-direction: column;
         align-items: center;
     }
+    .category-banner {
+        width: 100%;
+        .swiper-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-button {
+            top: calc(50% - 44px);
+        }
+    }
     .category-tabs {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));

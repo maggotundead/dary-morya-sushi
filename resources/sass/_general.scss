@@ -152,7 +152,7 @@ main {
     margin-right: auto;
     position: relative;
     padding: 0 $container-padding-x-desktop;
-    @include maxw1024 {
+    @include tablet {
         padding: 0 $container-padding-x-tablet;
     }
     @include mobile {

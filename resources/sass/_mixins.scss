@@ -30,13 +30,13 @@
         @content;
     }
 }
-@mixin maxw1024 {
-    @media screen and (max-width: 1024px) {
+@mixin tablet {
+    @media screen and (max-width: $tablet-max-width) {
         @content;
     }
 }
 @mixin mobile {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $mobile-max-width) {
         @content;
     }
 }

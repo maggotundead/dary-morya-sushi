@@ -29,6 +29,26 @@ const teamSwiper = new Swiper('.js-related-swiper', {
     },
 });
 
+const salesSwiper = new Swiper('.js-sales-swiper', {
+    slidesPerView: 1,
+    loop: true,
+    draggable: true,
+    // noSwiping: true,
+    autoplay: {
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 document.querySelector('.burger-btn').addEventListener('click', () => {
     document.querySelector('body').classList.toggle('mobile-menu-open');
 });
@@ -76,6 +96,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //     });
 // });
 
-document.querySelector('.cart-btn').addEventListener('click', ()=> {
-    document.querySelector('.cart').classList.toggle('open');
+const cart = document.querySelector('.cart');
+document.querySelector('.cart-btn').addEventListener('click', () => {
+    cart.classList.toggle('open');
+});
+
+document.addEventListener('click', function(event) {
+    if ( cart.classList.contains('open') && event.target !== cart && !cart.contains(event.target) ) {
+        cart.classList.remove('open');
+    }
 });
