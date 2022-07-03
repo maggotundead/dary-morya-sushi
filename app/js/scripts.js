@@ -17,7 +17,7 @@ const teamSwiper = new Swiper('.js-related-swiper', {
     slidesPerView: 'auto',
     loop: true,
     draggable: true,
-    spaceBetween: 32,
+    spaceBetween: 20,
     // noSwiping: true,
     autoplay: {
         disableOnInteraction: true,
@@ -43,8 +43,7 @@ const teamSwiper = new Swiper('.js-related-swiper', {
     },
 });
 
-
-document.querySelector('.burger').addEventListener('click', () => {
+document.querySelector('.burger-btn').addEventListener('click', () => {
     document.querySelector('body').classList.toggle('mobile-menu-open');
 });
 
@@ -69,24 +68,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 //modal
-const contactModal = document.querySelector('.contact-modal');
-document.querySelectorAll('[modal-btn]').forEach(btn => {
-    btn.addEventListener('click', () => {
-        contactModal.classList.add('open');
-    });
-});
+// const contactModal = document.querySelector('.contact-modal');
+// document.querySelectorAll('[modal-btn]').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         contactModal.classList.add('open');
+//     });
+// });
 
-document.querySelectorAll('.modal-close').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.classList.remove('open');
-        });
-    });
-});
-document.querySelectorAll('.modal-overlay').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.classList.remove('open');
-        });
-    });
+// document.querySelectorAll('.modal-close').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         document.querySelectorAll('.modal').forEach(modal => {
+//             modal.classList.remove('open');
+//         });
+//     });
+// });
+// document.querySelectorAll('.modal-overlay').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         document.querySelectorAll('.modal').forEach(modal => {
+//             modal.classList.remove('open');
+//         });
+//     });
+// });
+
+document.querySelector('.cart-btn').addEventListener('click', ()=> {
+    document.querySelector('.cart').classList.toggle('open');
 });

@@ -355,7 +355,7 @@
             }
             td {
                 padding: 16px 0;
-                border-bottom: 1px solid $grey;
+                border-bottom: 1px solid rgba($grey, .5);
             }
         }
 
@@ -366,6 +366,10 @@
                 width: 36px;
                 height: 36px;
                 margin-right: 16px;
+                background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='25' width='25'%3E%3Cg transform='translate(3.9661017,3.5677966)'%3E%3Cpath d='M -2.5783352e-4,-0.00146808 17.435473,18.212367' stroke='%23f16311' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M -2.5783352e-4,18.212367 17.435473,-0.00146808' stroke='%23f16311' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-size: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
             }
             img {
                 width: 80px;
@@ -412,10 +416,179 @@
         }
 
         &-related {
-            margin-top: 24px;
+            margin-top: 48px;
+            &-title {
+                text-transform: uppercase;
+            }
             &-products {
                 margin-top: 16px;
             }
         }
+
+        &-summary {
+            margin-top: 48px;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            background-color: rgba($orange, .1);
+            padding: 24px;
+        }
+        &-delivery-annotation {
+            color: red;
+            font-size: 18px;
+        }
+        &-total {
+            font-size: 24px;
+            font-weight: 700;
+            span {
+                color: $orange;
+                margin-left: 10px;
+            }
+        }
+
+        &-form {
+            margin-top: 48px;
+        }
+
+        &-group {
+            display: flex;
+            flex-wrap: wrap;
+            &:not(:last-child) {
+                margin-bottom: 48px;
+            }
+            h3 {
+                width: 100%;
+                margin-bottom: 16px;
+                user-select: none;
+            }
+        }
+
+        &-subgroup {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+            h4 {
+                color: $grey;
+                font-weight: 400;
+                margin-right: 16px;
+            }
+        }
+    }
+
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 360px;
+        width: 100%;
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+        label {
+            color: $grey;
+        }
+        input {
+            margin-top: 10px;
+            width: 100%;
+            height: 48px;
+            padding: 0 16px;
+            border: 1px solid $black;
+            transition: $duration;
+            &:focus {
+                border-color: $orange;
+            }
+        }
+    }
+    .radio-wrapper {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
+        input:checked + label span::before {
+            opacity: 1;
+        }
+        label {
+            display: flex;
+        }
+        span {
+            width: 20px;
+            height: 20px;
+            border: 1px solid $black;
+            margin-right: 8px;
+            position: relative;
+            flex-shrink: 0;
+            &::before {
+                content: '';
+                opacity: 0;
+                transition: $duration;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                right: 4px;
+                bottom: 4px;
+                background-color: $orange;
+            }
+        }
+    }
+
+    .delivery-inputs,
+    .date-time-inputs {
+        margin-top: 24px;
+        display: flex;
+        width: 100%;
+    }
+
+    .quantity-item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+        span {
+            margin-right: 8px;
+        }
+        button {
+            color: $orange;
+            font-weight: 700;
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+        }
+        input {
+            height: 36px;
+            font-size: 20px;
+            background-color: rgba($orange, .1);
+            border: 0;
+            width: 50px;
+            margin: 0 10px;
+            text-align: center;
+            user-select: none;
+        }
+    }
+}
+
+.block-thanks {
+    padding: 100px 0;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        max-width: 480px;
+        text-align: center;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        a {
+            color: $orange;
+        }
+    }
+    .btn {
+        margin-top: 32px;
     }
 }
