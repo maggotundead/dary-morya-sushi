@@ -30,6 +30,11 @@
         @content;
     }
 }
+@mixin maxw1200 {
+    @media screen and (max-width: 1200px) {
+        @content;
+    }
+}
 @mixin tablet {
     @media screen and (max-width: $tablet-max-width) {
         @content;

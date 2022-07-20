@@ -1,5 +1,5 @@
 
-const teamSwiper = new Swiper('.js-related-swiper', {
+const relatedSwiper = new Swiper('.js-related-swiper', {
     slidesPerView: 'auto',
     loop: true,
     draggable: true,

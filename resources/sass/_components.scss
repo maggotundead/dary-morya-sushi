@@ -40,12 +40,18 @@
 }
 
 .block-title {
-    padding: 36px 0;
+    // padding: 36px 0;
+    padding-bottom: 36px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 36px;
     width: 100%;
+    @include mobile {
+        // padding: 24px 0;
+        padding-bottom: 24px;
+        font-size: 28px;
+    }
 }
 
 .product-item {
@@ -57,6 +63,9 @@
     &:hover {
         box-shadow: 3px 5.2px 20.3px 6.8px rgba(0, 4, 2, 0.08);
         z-index: 2;
+        @include mobile {
+            box-shadow: initial;
+        }
     }
     &-label {
         color: #fff;
@@ -67,6 +76,11 @@
         padding: 4px 16px;
         font-size: 14px;
         font-weight: 700;
+        @include mobile {
+            font-weight: 400;
+            left: -8px;
+            top: 8px;
+        }
         &.orange {
             background: $orange-gradient;
         }
@@ -102,6 +116,9 @@
     &-params {
         display: flex;
         align-items: baseline;
+        @include mobile {
+            width: 100%;
+        }
     }
     &-weight {
         font-size: 15px;
@@ -125,8 +142,12 @@
             font-size: 12px;
         }
     }
-    // &-add {
-    // }
+    &-add,
+    &-order {
+        @include mobile {
+            margin-top: 12px;
+        }
+    }
 }
 
 .loadmore {
@@ -143,6 +164,14 @@
     color: $grey;
     transition: $duration;
     background-color: transparent;
+    @include mobile {
+        margin-top: 32px;
+        padding: 0 24px;
+        border-width: 1px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 500;
+    }
     &:hover {
         background-color: #ff954e;
         color: #fff;
@@ -158,6 +187,12 @@
         border-radius: 100%;
         margin-left: 15px;
         transition: $duration;
+        @include mobile {
+            width: 6px;
+            height: 6px;
+            border-width: 1px;
+            margin-left: 12px;
+        }
     }
 }
 
@@ -182,6 +217,9 @@
 
     .swiper-slide {
         width: $related-slide-width;
+        @include mobile {
+            width: $related-slide-width-mobile;
+        }
     }
 
     .product-item {
@@ -193,6 +231,9 @@
 
     .swiper-button {
         top: 88px;
+        @include mobile {
+            top: 72px;
+        }
     }
 }
 
@@ -207,10 +248,187 @@
     position: relative;
     margin-top: 32px;
     bottom: 0;
+    @include mobile {
+        margin-top: 24px;
+    }
     &-bullet {
         border-radius: 0;
         &-active {
             background: $orange;
+        }
+    }
+}
+
+
+.checkout,
+.cart {
+    &-table {
+        width: 100%;
+        margin-bottom: auto;
+        @include mobile {
+            border-collapse: collapse;
+        }
+
+        // same as cart
+        th {
+            background-color: rgba($orange, .1);
+            height: 50px;
+            // min-width: 200px;
+            @include mobile {
+                font-size: 14px;
+            }
+            &:first-child {
+                @include mobile {
+                    text-align: right;
+                }
+            }
+        }
+        td {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba($grey, .5);
+            @include mobile {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+            &:first-child {
+                @include mobile {
+                    // padding-left: 10px;
+                    padding-left: $container-padding-x-mobile;
+                }
+            }
+            &:last-child {
+                @include mobile {
+                    // padding-right: 10px;
+                    padding-right: $container-padding-x-mobile;
+                }
+            }
+        }
+    }
+
+    &-product-info {
+        display: flex;
+        align-items: center;
+        @include mobile {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            text-align: right;
+        }
+        button {
+            width: 36px;
+            height: 36px;
+            margin-right: 16px;
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' height='25' width='25'%3E%3Cg transform='translate(3.9661017,3.5677966)'%3E%3Cpath d='M -2.5783352e-4,-0.00146808 17.435473,18.212367' stroke='%23f16311' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M -2.5783352e-4,18.212367 17.435473,-0.00146808' stroke='%23f16311' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+            background-size: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+            @include mobile {
+                width: 24px;
+                height: 24px;
+                // margin-right: 8px;
+                background-size: 24px;
+            }
+        }
+        img {
+            width: 80px;
+            margin-right: 16px;
+            @include mobile {
+                // width: 60px;
+                margin-right: 0;
+            }
+        }
+        h3 {
+            font-weight: 400;
+            @include mobile {
+                width: 100%;
+                margin-top: 8px;
+                font-size: 16px;
+            }
+        }
+    }
+    &-product-price {
+        text-align: center;
+        color: $orange;
+        font-size: 18px;
+        font-weight: 700;
+        @include mobile {
+            white-space: nowrap;
+            padding: 0 $container-padding-x-mobile;
+        }
+        span {
+            font-size: 12px;
+        }
+    }
+
+    &-product-quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+            color: $orange;
+            font-weight: 700;
+            width: 36px;
+            height: 36px;
+            font-size: 24px;
+            @include mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        input {
+            appearance: textfield;
+            text-align: center;
+            height: 36px;
+            border: 0;
+            border-bottom: 1px solid transparent;
+            width: 50px;
+            transition: $duration;
+            font-size: 24px;
+            @include mobile {
+                font-size: 20px;
+                // width: 24px;
+            }
+            &:focus {
+                border-color: $orange;
+            }
+        }
+    }
+    &-summary {
+        margin-top: 48px;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        background-color: rgba($orange, .1);
+        padding: 24px;
+        @include mobile {
+            margin-left: -$container-padding-x-mobile;
+            margin-right: -$container-padding-x-mobile;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: $container-padding-x-mobile;
+        }
+    }
+    &-total {
+        font-size: 24px;
+        font-weight: 700;
+        @include mobile {
+            font-size: 20px;
+        }
+        &:not(:only-child) {
+            @include mobile {
+                margin-top: 16px;
+            }
+        }
+        span {
+            color: $orange;
+            margin-left: 10px;
+        }
+    }
+    &-delivery-annotation {
+        color: red;
+        font-size: 18px;
+        @include mobile {
+            font-size: 14px;
         }
     }
 }
